@@ -2,7 +2,7 @@
 
 resource "aws_key_pair" "deployer" {
   key_name   = "terraform_deployer"
-  public_key = "${file(var.public_key_path)}"
+  public_key = "${var.public_key_path}"
 }
 
 resource "aws_launch_configuration" "launch_config" {
