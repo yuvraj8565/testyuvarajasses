@@ -2,7 +2,7 @@ name: owndeploy
 
 on:
   push:
-    branches: [Master]
+    branches: [main]
     paths:
       - "task1/*"
 env:
@@ -47,10 +47,10 @@ jobs:
 
     steps:
       - name: Clone repo
-        uses: actions/checkout@master
+        uses: actions/checkout@main
 
       - name: tfsec
-        uses: tfsec/tfsec-sarif-action@master
+        uses: tfsec/tfsec-sarif-action@main
         with:
           working_directory: task1
           github_token: ${{ secrets.GITHUB_TOKEN }}
