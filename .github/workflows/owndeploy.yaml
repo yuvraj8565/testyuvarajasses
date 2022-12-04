@@ -50,7 +50,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: tfsec
-        uses: tfsec/tfsec-sarif-action@master
+        uses: tfsec/tfsec-sarif-action@main
         with:
           working_directory: task1
           github_token: ${{ secrets.GITHUB_TOKEN }}
