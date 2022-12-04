@@ -1,4 +1,4 @@
-# INDEX FILE new
+# INDEX FILE new version
 resource "aws_s3_bucket_object" "object" {
   bucket = var.s3_bucket
   key    = "index.html"
