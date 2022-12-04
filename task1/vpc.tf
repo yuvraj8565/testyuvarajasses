@@ -11,7 +11,7 @@ resource "aws_vpc" "assessment-vpc" {
   }
 }
 
-# Public subnet block Creation
+# Public subnet block Creation 2
 resource "aws_subnet" "public" {
   count                   = var.num_count
   vpc_id                  = aws_vpc.assessment-vpc.id
