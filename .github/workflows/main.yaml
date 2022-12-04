@@ -47,10 +47,10 @@ jobs:
 
     steps:
       - name: Clone repo
-        uses: actions/checkout@main
+        uses: actions/checkout@master
 
       - name: tfsec
-        uses: tfsec/tfsec-sarif-action@main
+        uses: tfsec/tfsec-sarif-action@master
         with:
           working_directory: task1
           github_token: ${{ secrets.GITHUB_TOKEN }}
