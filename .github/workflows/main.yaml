@@ -3,7 +3,7 @@ name: main
 on:
   push:
     branches: [Master]
-    paths: 
+    paths:
       - 'updatedindex/*'
 env:
   aws_region: ap-southeast-1
@@ -80,9 +80,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
 
-      - name: Upload file to S3 
+      - name: Upload file to S3
         run: |
-          aws s3 cp code/index.html s3://${{ secrets.AWS_BUCKET }}
-      - name: start instance refresh 
+          aws s3 cp updatedindex/index.html s3://yuvraj-assessment
+      - name: start instance refresh
         run: |
           aws autoscaling start-instance-refresh --auto-scaling-group-name assessment-autoscaling-group
